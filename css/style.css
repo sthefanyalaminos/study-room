@@ -141,3 +141,39 @@ main {
         flex-direction: column;
         gap: 0.5rem;
     }
+
+    .container_list h2,
+    .container_notes h2 {
+        font-family: "Albert Sans", sans-serif;
+        font-weight: 500;
+        font-size: 0.95rem;
+        color: var(--first-brown);
+        background-color: #fcf7f0;
+        border-radius: 0.75rem;
+        padding: 0.35rem 0.75rem;
+        margin: 0;
+    }
+
+    .container_list::after,
+    .container_notes::after {
+        content: "";
+        flex: 1;
+        background-color: #fcf7f0;
+        border-radius: 0.75rem;
+        min-height: 140px;
+    }
+
+    .image {
+        position: absolute;
+        bottom: -1.5rem;
+        left: calc(42% - 4rem); 
+        width: clamp(120px, 18vw, 200px);
+        margin: 0;
+        pointer-events: none;
+    }
+
+    .image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
