@@ -47,6 +47,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 1.5rem;
 }
 
     h1{
@@ -54,12 +55,12 @@ header{
         color: var(--first-brown);
         font-size: 4.375rem;
         padding-top: 0.5rem;
-        margin-bottom: 0.1rem;
+        margin-bottom: 0.8rem;
     }
  
     ul {
         display: flex;
-        gap: 1.5rem;
+        gap: 4rem;
         list-style: none;
         padding: 0;
         margin: 0;
@@ -73,6 +74,7 @@ header{
         background-color: var(--principal-gray);
         border: none;
         border-radius: 1.5625rem;
+        width: 12rem;
         font-family: "Albert Sans", sans-serif;
         font-weight: 400;
         color: var(--first-brown);
@@ -147,7 +149,7 @@ main {
     .container_notes h2 {
         font-family: "Albert Sans", sans-serif;
         font-weight: 500;
-        font-size: 0.95rem;
+        font-size: 1.2rem;
         color: var(--first-brown);
         background-color: #fcf7f0;
         border-radius: 0.75rem;
@@ -174,7 +176,7 @@ main {
     }
 
     .image img {
-        height: 17.5rem;
+        height: 17rem;
         width: auto;
         display: block;
     }
