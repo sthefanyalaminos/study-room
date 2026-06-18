@@ -4,7 +4,7 @@
     --principal-gray: #e9e5de;
     --first-brown: #76463c;
     --first-pink: #febfbf;
-    --first-dark-pink: #a96c72;
+    --first-mauve: #a96c72;
     --second-red: #b95359;
     --second-pink: #f5bab2;
     --second-yellow: #f4bf75;
@@ -14,16 +14,33 @@
 }
 
 html{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body{
-    background-image: url('/assets/background.png');
-    background-size: cover;
-    background-position: center; 
-    background-repeat: no-repeat;
+   background-color: #fcf7f1;
+    background-image:
+        radial-gradient(circle, #8b6a5a 1px, transparent 1px),
+        radial-gradient(circle, #a08070 1.2px, transparent 1.2px),
+        radial-gradient(circle, #c0a898 0.8px, transparent 0.8px),
+        radial-gradient(circle, #6e5a52 0.9px, transparent 0.9px);
+    background-size:
+        120px 120px,
+        80px  80px,
+        60px  60px,
+        100px 100px;
+    background-position:
+        10px 15px,
+        45px 60px,
+        70px 20px,
+        5px  80px;
     min-height: 100vh;
+    font-family: "Albert Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5rem 1.5rem;
 }
 
 header{
@@ -36,25 +53,40 @@ header{
         font-family: "Caprasimo", serif;
         color: var(--first-brown);
         font-size: 4.375rem;
-        margin-top: 0.3125rem;
+        padding-top: 0.5rem;
+        gap: 0.5rem;
     }
-
-    ul{
+ 
+    ul {
         display: flex;
-        gap: 30px;
+        gap: 1.5rem;
         list-style: none;
         padding: 0;
-        margin-top: 5px;
+        margin: 0;
+    }
+ 
+    li {
+        display: flex;
+    }
+        
+    button {
+        background-color: var(--principal-gray);
+        border: none;
+        border-radius: 1.5625rem;
+        font-family: "Albert Sans", sans-serif;
+        font-weight: 400;
+        color: var(--first-brown);
+        font-size: 1rem;
+        padding: 0.45rem 1.4rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
     }
 
-        button{ 
-            background-color: var(--principal-gray);
-            border: none;
-            border-radius: 1.5625rem;
-            font-family: "Albert Sans", sans-serif;
-            font-weight: 400;
-            color: var(--first-brown);
-            font-size: 20px;
-        }
-
-        
+    button:hover {
+        background-color: #d9d4cc;
+    }
+ 
+    button:focus-visible {
+        outline: 2px solid var(--first-brown);
+        outline-offset: 2px;
+    }
