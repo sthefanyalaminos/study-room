@@ -165,16 +165,16 @@ main {
 
     .image {
         position: absolute;
-        bottom: -1.5rem;
-        left: calc(42% - 4rem); 
+        bottom: -7rem;
+        left: 8.75rem; 
         width: clamp(120px, 18vw, 200px);
         margin: 0;
         pointer-events: none;
     }
 
     .image img {
-        width: 100%;
-        height: auto;
+        height: 17.5rem;
+        width: auto;
         display: block;
     }
 
@@ -184,7 +184,7 @@ footer {
     justify-content: center;
 }
 
-    footer h3 {
+    footer button {
         background-color: var(--first-mauve);
         color: #e9e5de;
         font-family: "Albert Sans", sans-serif;
@@ -192,13 +192,13 @@ footer {
         font-size: 1.5625rem;
         border-radius: 3rem;
         padding: 0.85rem 3rem;
-        width: 1200px;
-        height: 50px;
+        width: 75rem;
+        height: 3.125rem;
         text-align: center;
         cursor: pointer;
         transition: background-color 0.2s ease;
     }
 
-    footer h3:hover {
+    footer button:hover {
         background-color: #8a5c5f;
     }
