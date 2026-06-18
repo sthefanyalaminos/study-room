@@ -15,8 +15,19 @@
     --third-blue: #b4c1e1;
 }
 
-
 html{
     margin: 0;
     padding: 0;
 }
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    h1{
+        font-family: "Caprasimo", serif;
+        color: var(--first-brown);
+        font-size: 70px;
+    }
