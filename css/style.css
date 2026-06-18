@@ -90,3 +90,54 @@ header{
         outline: 2px solid var(--first-brown);
         outline-offset: 2px;
     }
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex: 1;
+    position: relative;
+}
+
+    .container_hours {
+        flex: 0 0 auto;
+        width: 42%;
+        min-height: 190px;
+        background-color: var(--first-pink);
+        border-radius: 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container_hours::after {
+        content: "00:00";
+        font-family: "Caprasimo", serif;
+        font-size: clamp(3rem, 8vw, 5.5rem);
+        color: var(--first-brown);
+        letter-spacing: 0.05em;
+    }
+
+    .container_list {
+        flex: 1 1 0;
+        min-height: 220px;
+        background-color: var(--first-pink);
+        border-radius: 1.25rem;
+        padding: 0.75rem 0.85rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .container_notes {
+        flex: 1 1 0;
+        min-height: 220px;
+        background-color: var(--first-pink);
+        border-radius: 1.25rem;
+        padding: 0.75rem 0.85rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
