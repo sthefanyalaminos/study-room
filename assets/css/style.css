@@ -5,12 +5,12 @@
     --first-brown: #76463c;
     --first-pink: #ffcad2;
     --first-mauve: #a96c72;
-    --second-red: #ad3d36;
-    --second-pink: #f5bab2;
-    --second-yellow: #f3b854;
-    --third-red: #c84c49;
-    --third-pink: #e8b5b3; 
-    --third-blue: #b4c1e1;
+    --second-red: #c84c49;
+    --second-pink: #e8b5b3; 
+    --second-blue: #b4c1e1;
+    --third-red: #ad3d36;
+    --third-pink: #f5bab2;
+    --third-yellow: #f3b854;
 }
 
 html{

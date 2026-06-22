@@ -16,3 +16,22 @@ const THEMES = {
  
     partnerImage:       "assets/images/night.png",
   },
+
+    morning: {
+    h1Color:            "--second-red",   
+    headerBtnBg:        "--principal-gray",   
+    headerBtnColor:     "--second-red",   
+    headerBtnHoverBg:   "#d9d4cc",   
+    footerBtnBg:        "--second-blue",   
+    footerBtnColor:     "--principal-gray",   
+    footerBtnHoverBg:   "#9fabcbe8",   
+ 
+    containerBg:        "--second-pink",   
+    containerTimerText: "--second-red",  
+    cardBg:             "#fcf7f0",  
+    cardTextColor:      "--second-red",   
+ 
+    partnerImage:       "assets/images/morning.png",
+  },
+
+}
