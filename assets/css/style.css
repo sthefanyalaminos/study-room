@@ -119,7 +119,7 @@ main {
         content: "00:00";
         font-family: "Caprasimo", serif;
         font-size: clamp(3rem, 8vw, 5.5rem);
-        color: var(--first-brown);
+        color: var(--timer-color, var(--first-brown));
         letter-spacing: 0.05em;
     }
 

@@ -60,46 +60,59 @@ function getPeriod() {
   return "night";
 }
 
+function cssValue(val) {
+  return val.startsWith("--") ? `var(${val})` : val;
+}
+
 function applyTheme(theme) {
   const root  = document.documentElement;
   const style = document.createElement("style");
  
   
   style.textContent = `
-    header button:hover { background-color: ${theme.headerBtnHoverBg} !important; }
-    footer button:hover { background-color: ${theme.footerBtnHoverBg} !important; }
+    header button:hover { background-color: ${cssValue(theme.headerBtnHoverBg)} !important; }
+    footer button:hover { background-color: ${cssValue(theme.footerBtnHoverBg)} !important; }
   `;
   document.head.appendChild(style);
- 
+
   // h1
   const h1 = document.querySelector("h1");
-  if (h1) h1.style.color = theme.h1Color;
- 
-  // header buttons 
+  if (h1) h1.style.color = cssValue(theme.h1Color);
+
+  // header buttons
   document.querySelectorAll("header button").forEach(btn => {
-    btn.style.backgroundColor = theme.headerBtnBg;
-    btn.style.color            = theme.headerBtnColor;
+    btn.style.backgroundColor = cssValue(theme.headerBtnBg);
+    btn.style.color            = cssValue(theme.headerBtnColor);
   });
 
   // footer button
   const footerBtn = document.querySelector("footer button");
   if (footerBtn) {
-    footerBtn.style.backgroundColor = theme.footerBtnBg;
-    footerBtn.style.color            = theme.footerBtnColor;
+    footerBtn.style.backgroundColor = cssValue(theme.footerBtnBg);
+    footerBtn.style.color            = cssValue(theme.footerBtnColor);
   }
 
   // containers background
   document.querySelectorAll(".container_hours, .container_list, .container_notes").forEach(el => {
-    el.style.backgroundColor = theme.containerBg;
-  });
- 
-  // timer text
-  root.style.setProperty("--timer-color", theme.containerTimerText);
- 
-  // card backgrounds + h2 text color
-  document.querySelectorAll(".container_list h2, .container_notes h2").forEach(h2 => {
-    h2.style.backgroundColor = theme.cardBg;
-    h2.style.color            = theme.cardTextColor;
+    el.style.backgroundColor = cssValue(theme.containerBg);
   });
 
+  // timer text
+  root.style.setProperty("--timer-color", cssValue(theme.containerTimerText));
+
+  // card backgrounds + h2 text color
+  document.querySelectorAll(".container_list h2, .container_notes h2").forEach(h2 => {
+    h2.style.backgroundColor = cssValue(theme.cardBg);
+    h2.style.color            = cssValue(theme.cardTextColor);
+  });
+
+  // study partner image
+  const img = document.querySelector(".image img");
+  if (img) img.src = theme.partnerImage;
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const period = getPeriod();
+  applyTheme(THEMES[period]);
+  console.log(`[Study Room] Period detected: ${period}`);
+});
