@@ -1,3 +1,5 @@
+// THEMES CONFIGURATION
+
 const THEMES = {
  
   night: {
@@ -110,6 +112,23 @@ function applyTheme(theme) {
   const img = document.querySelector(".image img");
   if (img) img.src = theme.partnerImage;
 }
+
+// TIMER CONFIGURATION
+
+const POMODORO = {
+  focus:  25 * 60,
+  break:   5 * 60,
+};
+
+const timer = {
+  intervalId:  null,
+  secondsLeft: POMODORO.focus,
+  isFocus:     true,
+  isRunning:   false,
+};
+
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const period = getPeriod();
