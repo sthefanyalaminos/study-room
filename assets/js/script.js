@@ -34,4 +34,21 @@ const THEMES = {
     partnerImage:       "assets/images/morning.png",
   },
 
+  afternoon: {
+    h1Color:            "--third-red",   
+    headerBtnBg:        "--principal-gray",   
+    headerBtnColor:     "--third-red",   
+    headerBtnHoverBg:   "#d9d4cc",   
+    footerBtnBg:        "--third-yellow",   
+    footerBtnColor:     "#76463c",   
+    footerBtnHoverBg:   "#e1aa4cf1",   
+ 
+    containerBg:        "--third-pink",   
+    containerTimerText: "--third-red", 
+    cardBg:             "#fcf7f0",   
+    cardTextColor:      "--third-red",   
+ 
+    partnerImage:       "assets/images/afternoon.png",
+  },
+
 }
