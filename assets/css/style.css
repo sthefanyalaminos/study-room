@@ -374,10 +374,12 @@ footer {
 }
 
 /* Mobile responsive */
-@media (max-width: 915px) {
+@media (max-width: 767px) {
     body {
         padding: 0 1rem 0.75rem;
         overflow-x: hidden;
+        display: flex;
+        justify-content: center;
     }
 
     header {
@@ -409,6 +411,7 @@ footer {
         flex-direction: column;
         align-items: stretch;
         gap: 0.875rem;
+        margin: 0 2rem 0 1rem;
     }
 
     .container_hours,
@@ -438,11 +441,11 @@ footer {
     .image {
         position: static;
         width: min(10rem, 55vw);
-        margin: 0.25rem auto 0;
+        margin: 0 0 4rem -2rem;
     }
 
     footer {
-        margin-top: 1rem;
+        margin-top: -7rem;
     }
 
     footer button {
