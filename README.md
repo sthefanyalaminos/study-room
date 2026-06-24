@@ -3,6 +3,10 @@
 
 Ambiente de estudos construído em torno da Técnica Pomodoro. A interface adapta seu tema de cores de acordo com o período do dia, noite, manhã ou tarde, e reúne tudo o que você precisa em um só lugar para uma study session: um timer, uma lista de tarefas e um bloco de notas.
 
+<div align="right">
+<a href="https://pomodoro-timer-sthefanyalaminos.vercel.app/">Clique aqui para acessar!</a>
+</div>
+
 <img src="assets/images/img_readme1.png">
 <img src="assets/images/img_readme2.png">
 <img src="assets/images/img_readme3.png">
