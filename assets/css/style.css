@@ -375,14 +375,31 @@ footer {
 
 /* Mobile responsive */
 @media (max-width: 767px) {
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+
     body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding: 0 1rem 0.75rem;
         overflow-x: hidden;
-        display: flex;
-        justify-content: center;
+    }
+
+    header,
+    main,
+    footer {
+        width: 100%;
+        max-width: 480px;
     }
 
     header {
+        display: flex;
+        justify-content: center;
         margin-bottom: 0.875rem;
     }
 
@@ -408,17 +425,16 @@ footer {
     }
 
     main {
-        flex-direction: column;
-        align-items: stretch;
+        align-items: center;
         gap: 0.875rem;
-        margin: 0 2rem 0 1rem;
+        margin: 0;
     }
 
     .container_hours,
     .container_list,
     .container_notes {
         width: 100%;
-        min-width: 0;
+        max-width: 100%;
         min-height: 12rem;
         padding: 0.75rem;
     }
@@ -438,10 +454,12 @@ footer {
         padding: 0.5rem 0.7rem;
     }
 
-    .image {
+    .image img{
+        align-items: center;
         position: static;
-        width: min(10rem, 55vw);
-        margin: 0 0 4rem -2rem;
+        height: 225px;
+        width: auto;
+        margin: 0 0 6.25rem 0;
     }
 
     footer {
